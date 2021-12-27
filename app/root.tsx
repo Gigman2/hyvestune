@@ -1,3 +1,4 @@
+import {FC, ReactNode } from 'react'
 import {
   Links,
   LiveReload,
@@ -15,24 +16,33 @@ export const meta: MetaFunction = () => {
   return { title: "HyvesTune" };
 };
 
-export default function App() {
+const Document:FC<{children: ReactNode, title?: string}> = ({children, title}) => {
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {title ? <title>{title}</title> : null}
         <Meta />
         <Links />
       </head>
       <body>
-        <ChakraProvider theme={theme}>
-          <Outlet />
-          {/* <ScrollRestoration />
-          <Scripts />
-          {process.env.NODE_ENV === "development" && <LiveReload />} */}
-        </ChakraProvider>
+        {children}
+        <ScrollRestoration />
+        <Scripts />
+        {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
     </html>
+  )
+}
+
+export default function App() {
+  return (
+    <Document>
+      <ChakraProvider theme={theme}>
+          <Outlet />
+        </ChakraProvider>
+    </Document>
   );
 }
 
