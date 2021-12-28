@@ -1,5 +1,5 @@
 import { Box, Flex, Icon, Image, Text } from "@chakra-ui/react";
-import { Home, Search, Card, Folder, Music, NFT, Activity, Briefcase } from "~/theme/Icons";
+import { Home, Search, Card, Folder, Music, NFT, Activity, Briefcase, Setting, Help, Logout } from "~/theme/Icons";
 
 const Navs = [
     {
@@ -27,9 +27,17 @@ const Navs = [
     }
 ]
 
+
+const NavsFooter = [
+    {name: 'Settings', icon: Setting, path: '/dashboard/'},
+    {name: 'Help Center', icon: Help, path: '/dashboard/'},
+    {name: 'Log out', icon: Logout, path: '/dashboard/'},
+]
+
+
 export default function Sidebar() {
   return (
-    <Flex  h="100vh" w="250px" bg="black" direction={'column'}>
+    <Flex  minH="100vh" h="auto" w="250px" bg="black" direction={'column'}>
         <Box>
             <Image src={'/images/logo.png'} />
         </Box>
@@ -42,17 +50,26 @@ export default function Sidebar() {
                             align={'center'} 
                             px={6} 
                             py={1} 
-                            bg="whiteAlpha.200" 
+                            bg="transparent" 
                             rounded={"md"} 
                             mb={4} 
                             color="whiteAlpha.500" 
                             cursor={'pointer'} 
-                            _active={{color: 'white'}}>
+                            _active={{color: 'white', bg: 'whiteAlpha.200'}}>
                             <Icon as={child.icon}/>
                             <Text ml={2}>{child.name}</Text>
                         </Flex>
                     ))}
                 </Box>)
+            )}
+        </Box>
+
+        <Box mt={6} ml={8}>
+            {NavsFooter.map(item => (
+                <Flex align={'center'} mb={3} color="white">
+                    <Icon as={item.icon}/>
+                    <Text color="white" fontWeight={400} ml={2}>{item.name}</Text>
+                </Flex>)
             )}
         </Box>
     </Flex>

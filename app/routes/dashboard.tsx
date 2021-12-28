@@ -5,7 +5,7 @@ import Sidebar from "~/components/Sidebar";
 
 export default function Dashboard() {
   return (
-    <Flex minH={'100vh'}  h="100vh" w="100%" bg="black">
+    <Flex minH={'100vh'}  h="auto" w="100%" bg="black">
       <Sidebar />
       <Box p={10}>
         <Topbar />
