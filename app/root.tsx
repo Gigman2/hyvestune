@@ -9,7 +9,7 @@ import {
 } from "remix";
 import type { MetaFunction } from "remix";
 import { ChakraProvider } from '@chakra-ui/react';
-import { theme } from '../theme/theme'
+import { theme } from './theme/theme'
 
 
 export const meta: MetaFunction = () => {
