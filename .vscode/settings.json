@@ -1,12 +1,12 @@
 {
     "editor.formatOnSave": true,
     "[typescript]": {
-    "editor.formatOnSave": false
+        "editor.formatOnSave": false
     },
     "eslint.alwaysShowStatus": true,
     "editor.fontLigatures": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+        "source.fixAll.eslint": true
     },
     "eslint.validate": [
         "javascript",
