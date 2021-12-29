@@ -7,14 +7,15 @@ import { pixelToRem } from '~/helpers/misc';
 interface ILayoutProps {
   children?: ReactNode;
   showHeader?: boolean;
+  page: number;
 }
-const Layout: React.FC<ILayoutProps> = ({ children, showHeader }) => {
+const Layout: React.FC<ILayoutProps> = ({ children, showHeader, page }) => {
   return (
     <Box>
       <Box minH="100vh" fontFamily="body" fontSize={{ lg: 'lg' }}>
         <Grid templateColumns="12.7% 87.3%" h="auto" w="100%" bg="black">
           <GridItem>
-            <Sidebar />
+            <Sidebar page={page} />
           </GridItem>
           <GridItem>
             <Flex bg="black" direction="column" w="100%">

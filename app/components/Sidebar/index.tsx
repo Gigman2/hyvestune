@@ -19,24 +19,24 @@ const Navs = [
   {
     name: 'Menu',
     children: [
-      { name: 'Home', icon: Home, path: '/dashboard' },
-      { name: 'Explore', icon: Search },
-      { name: 'Wallet', icon: Card },
+      { id: 1, name: 'Home', icon: Home, path: '/dashboard' },
+      { id: 2, name: 'Explore', icon: Search },
+      { id: 3, name: 'Wallet', icon: Card },
     ],
   },
   {
     name: 'Library',
     children: [
-      { name: 'Playlist', icon: Music },
-      { name: 'Album', icon: Folder },
+      { id: 4, name: 'Playlist', icon: Music },
+      { id: 5, name: 'Album', icon: Folder },
     ],
   },
   {
     name: 'NFTs',
     children: [
-      { name: 'Market Place', icon: NFT },
-      { name: 'My Portfolio', icon: Activity },
-      { name: 'Active Bids', icon: Briefcase },
+      { id: 6, name: 'Market Place', icon: NFT },
+      { id: 7, name: 'My Portfolio', icon: Activity },
+      { id: 8, name: 'Active Bids', icon: Briefcase },
     ],
   },
 ];
@@ -46,9 +46,10 @@ const NavsFooter = [
   { name: 'Help Center', icon: Help, path: '/dashboard/' },
   { name: 'Log out', icon: Logout, path: '/dashboard/' },
 ];
-
-const Sidebar = () => {
-  const [isActive, setIsActiveLink] = React.useState('');
+interface ISidebarProps {
+  page: number;
+}
+const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
   return (
     <Flex as="aside" minH="100vh" h="auto" bg="black" direction={'column'}>
       <Box>
@@ -68,10 +69,10 @@ const Sidebar = () => {
                 px={6}
                 py={1}
                 _hover={{ textDecoration: 'none' }}
-                bg="transparent"
+                bg={page === child.id ? 'whiteAlpha.200' : 'transparent'}
                 rounded={'md'}
                 mb={4}
-                color="whiteAlpha.500"
+                color={page === child.id ? 'white' : 'whiteAlpha.500'}
                 cursor={'pointer'}
                 _activeLink={{ color: 'white', bg: 'whiteAlpha.200', textDecoration: 'none' }}
                 _active={{ color: 'white', bg: 'whiteAlpha.200', textDecoration: 'none' }}
