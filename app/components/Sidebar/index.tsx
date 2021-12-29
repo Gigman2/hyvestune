@@ -56,7 +56,8 @@ export default function Sidebar() {
                             rounded={"md"} 
                             mb={4} 
                             color="whiteAlpha.500" 
-                            cursor={'pointer'} 
+                            cursor={'pointer'}
+                            textDecoration={'none'}
                             _activeLink={{color: 'white', bg: 'whiteAlpha.200'}}>
                             <Icon as={child.icon}/>
                             <Text ml={2}>{child.name}</Text>

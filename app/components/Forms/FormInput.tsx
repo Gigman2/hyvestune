@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
-import { Input, FormLabel, FormControl, InputProps } from '@chakra-ui/react'
+import { Input, InputGroup, InputLeftElement,FormLabel, FormControl, InputProps, Icon } from '@chakra-ui/react'
 import FormErrorHandler from './FormErrorHandler'
 import { IFormProps } from '../../interfaces/forms.interface'
 import { useFocus } from '~/hooks'
 
-const FormInput: React.FC<IFormProps & InputProps & {mTop?: number | string}> = ({
+const FormInput: React.FC<IFormProps & InputProps & {mTop?: number | string, inputIcon: any}> = ({
   label,
   error,
   touched,
@@ -31,14 +31,22 @@ const FormInput: React.FC<IFormProps & InputProps & {mTop?: number | string}> = 
           {label}
         </FormLabel>
       )}
-      <Input
-        fontSize={{ base: 12, xl: 14 }}
-        h={{ base: 10, lg: 14 }}
-        borderWidth={0}
-        bgColor={"white"}
-        _focus={{outline: 'none', borderColor: 'htIndigo.500'}}
-        {...rest}
-      />
+      <InputGroup>
+        <InputLeftElement
+          pointerEvents='none'
+          children={<Icon as={rest.inputIcon} color={rest.color} />}
+          mt={1}
+        />
+        <Input
+          fontSize={{ base: 12, xl: 14 }}
+          h={{ base: 10, lg: 14 }}
+          borderWidth={0}
+          bgColor={rest.bg || "white"}
+          _focus={{outline: 'none', borderColor: 'htIndigo.500'}}
+          {...rest}
+        />
+      </InputGroup>
+
       <FormErrorHandler
         error={error}
         touched={touched}

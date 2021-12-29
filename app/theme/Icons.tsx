@@ -157,3 +157,20 @@ export const Home = createIcon({
   })
 
 
+  export const Wave = createIcon({
+      displayName: 'Wave',
+      viewBox: '0 0 300 107',
+      path: (
+          <>
+            <path opacity="0.118234" fillRule="evenodd" clipRule="evenodd" d="M0 14.782C0 14.782 9.39374 15.8214 25.4973 25.0589C41.6008 34.2965 62.216 19.9205 62.216 19.9205C62.216 19.9205 95.6463 0.382196 128.923 9.81234C162.199 19.2425 186.106 -4.3979 205.771 2.70722C225.436 9.81234 230.86 30.1974 245.265 25.0589C250.638 23.1421 258.01 23.0005 264.135 18.8954C268.956 15.6643 277.675 4.29914 277.675 4.29914L285.651 6.2927L294.303 10.3529L311.318 0H331V91.2465C331 100.083 323.837 107.247 315 107.247H16C7.1635 107.247 5.1337e-05 100.083 4.60189e-05 91.2465L0 14.782Z" fill="url(#paint0_linear_58_93)"/>
+            <defs>
+                <linearGradient id="paint0_linear_58_93" x1="322.631" y1="2.28476" x2="54.8037" y2="133.245" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#12046B"/>
+                    <stop offset="0.0423345" stopColor="#D30B8F"/>
+                    <stop offset="1" stopColor="#C20B83"/>
+                </linearGradient>
+            </defs>
+          </>
+      )
+  })
+

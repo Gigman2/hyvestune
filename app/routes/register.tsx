@@ -9,7 +9,7 @@ import { Input } from "~/components/Forms"
 export default function Login() {
   return (
     <Box w={'full'} h={'100vh'} pt="7vh" bg={"url('/images/create account-image.png')"} backgroundSize="cover" pos="relative">
-      <Box bg="htGradient.500" w="100%" h="100%" pos={'absolute'} top="0" opacity={0.5} zIndex={2}></Box>
+      <Box bg="htGradient.1" w="100%" h="100%" pos={'absolute'} top="0" opacity={0.5} zIndex={2}></Box>
       <Box w={'700px'} minH="80vh" bg="white" mx="auto" rounded="2xl" p={5} pos={'relative'} zIndex={3}>
         <Heading textAlign={'center'} fontSize={18} mt={8}>Create Account</Heading>
         
