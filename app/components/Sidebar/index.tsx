@@ -1,4 +1,6 @@
-import { Box, Flex, Icon, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Icon, Image, Text, Link } from '@chakra-ui/react';
+import React from 'react';
+
 import {
   Home,
   Search,
@@ -17,7 +19,7 @@ const Navs = [
   {
     name: 'Menu',
     children: [
-      { name: 'Home', icon: Home, path: '/dashboard/' },
+      { name: 'Home', icon: Home, path: '/dashboard' },
       { name: 'Explore', icon: Search },
       { name: 'Wallet', icon: Card },
     ],
@@ -45,7 +47,8 @@ const NavsFooter = [
   { name: 'Log out', icon: Logout, path: '/dashboard/' },
 ];
 
-export default function Sidebar() {
+const Sidebar = () => {
+  const [isActive, setIsActiveLink] = React.useState('');
   return (
     <Flex as="aside" minH="100vh" h="auto" bg="black" direction={'column'}>
       <Box>
@@ -59,15 +62,19 @@ export default function Sidebar() {
             </Text>
             {item.children.map((child) => (
               <Flex
+                as={Link}
+                to={child.path}
                 align={'center'}
                 px={6}
                 py={1}
+                _hover={{ textDecoration: 'none' }}
                 bg="transparent"
                 rounded={'md'}
                 mb={4}
                 color="whiteAlpha.500"
                 cursor={'pointer'}
-                _active={{ color: 'white', bg: 'whiteAlpha.200' }}
+                _activeLink={{ color: 'white', bg: 'whiteAlpha.200', textDecoration: 'none' }}
+                _active={{ color: 'white', bg: 'whiteAlpha.200', textDecoration: 'none' }}
               >
                 <Icon as={child.icon} />
                 <Text ml={2}>{child.name}</Text>
@@ -90,4 +97,6 @@ export default function Sidebar() {
     </Flex>
     // <Outlet />
   );
-}
+};
+
+export default Sidebar;

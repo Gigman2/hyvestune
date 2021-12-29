@@ -19,7 +19,7 @@ const Layout: React.FC<ILayoutProps> = ({ children, showHeader }) => {
           <GridItem>
             <Flex bg="black" direction="column" w="100%">
               {showHeader && (
-                <Box bg="transparent" w="100%">
+                <Box position="fixed" bg="transparent" w="87.3%">
                   {<TopBar width="100%" />}
                 </Box>
               )}
