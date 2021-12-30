@@ -51,7 +51,7 @@ interface ISidebarProps {
 }
 const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
   return (
-    <Flex as="aside" minH="100vh" h="auto" bg="black" direction={'column'}>
+    <Flex as="aside" position="fixed" minH="100vh" h="auto" bg="black" direction={'column'}>
       <Box>
         <Image src={'/images/logo.png'} />
       </Box>
@@ -69,7 +69,7 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
                 px={6}
                 py={1}
                 _hover={{ textDecoration: 'none' }}
-                bg={page === child.id ? 'whiteAlpha.200' : 'transparent'}
+                bg={page === child.id ? 'rgba(255, 255, 255, 0.12)' : 'transparent'}
                 rounded={'md'}
                 mb={4}
                 color={page === child.id ? 'white' : 'whiteAlpha.500'}
