@@ -16,7 +16,7 @@ const breakpoints = createBreakpoints({
     styles: {
       global: () => ({
         'html, body': {
-          fontFamily: '"CeraPro", sans-serif',
+          fontFamily: '"Inter", sans-serif',
           fontWeight: 400
         },
         body: {
@@ -29,8 +29,8 @@ const breakpoints = createBreakpoints({
     },
     breakpoints,
     fonts: {
-      heading: '"CeraPro", sans-serif',
-      body: '"CeraPro", sans-serif'
+      heading: '"Inter", sans-serif',
+      body: '"Inter", sans-serif'
     },
     fontSizes: {
       xx: '.55rem',

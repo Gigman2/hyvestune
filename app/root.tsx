@@ -10,7 +10,11 @@ import {
 import type { MetaFunction } from "remix";
 import { ChakraProvider } from '@chakra-ui/react';
 import { theme } from './theme/theme'
+import styles from '../public/styles.css'
 
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
 
 export const meta: MetaFunction = () => {
   return { title: "HyvesTune" };

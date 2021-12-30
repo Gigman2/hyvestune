@@ -7,7 +7,7 @@ export default function Dashboard() {
   return (
     <Flex minH={'100vh'}  h="auto" w="100%" bg="black">
       <Sidebar />
-      <Box p={10} w="100%">
+      <Box w="100%" pos="relative">
         <Topbar />
         <Outlet />
       </Box>

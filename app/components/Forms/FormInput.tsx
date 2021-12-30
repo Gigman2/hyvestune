@@ -31,12 +31,13 @@ const FormInput: React.FC<IFormProps & InputProps & {mTop?: number | string, inp
           {label}
         </FormLabel>
       )}
-      <InputGroup>
-        <InputLeftElement
+      <InputGroup color={rest.color}>
+      {rest.inputIcon && <InputLeftElement
           pointerEvents='none'
           children={<Icon as={rest.inputIcon} color={rest.color} />}
           mt={1}
-        />
+        />}
+        
         <Input
           fontSize={{ base: 12, xl: 14 }}
           h={{ base: 10, lg: 14 }}

@@ -6,7 +6,7 @@ import {BiSearch} from 'react-icons/bi'
 
 export default function Topbar() {
   return (
-    <Flex  h="50px" w="100%" bg="transparent" align={'center'} justifyContent={'space-between'}>
+    <Flex py={16} px={6} h="50px" w="100%" bg="transparent" align={'center'} justifyContent={'space-between'} pos="relative" zIndex={10}>
       <Box h={12} w={'500px'} bg="whiteAlpha.300" rounded={'full'}>
         <Input
             color="white"
