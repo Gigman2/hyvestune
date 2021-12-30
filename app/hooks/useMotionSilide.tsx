@@ -22,7 +22,6 @@ const useMotionSlide = ({ data }: IPropUseSlide): IRUseSlider => {
     });
 
   const loadingText = '';
-  console.log(currentSlide);
   return {
     loadingText,
     handleClick,

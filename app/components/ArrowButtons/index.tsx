@@ -1,7 +1,6 @@
 import React from 'react';
 import { Flex, Icon, IconButton, Box } from '@chakra-ui/react';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
-
 import { pixelToRem } from '~/helpers/misc';
 
 interface IArrowButtonsProps {

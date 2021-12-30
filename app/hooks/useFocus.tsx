@@ -10,7 +10,6 @@ function useFocus<T extends HTMLElement = HTMLElement>(elementRef: RefObject<T>)
   useEventListener('focus', focus, elementRef);
   useEventListener('blur', blur, elementRef);
 
-  console.log('Focus ', value);
   return value;
 }
 

@@ -11,14 +11,14 @@ const Layout: React.FC<ILayoutProps> = ({ children, showHeader, page }) => {
   return (
     <Box>
       <Box minH="100vh" fontFamily="body" fontSize={{ lg: 'lg' }}>
-        <Grid templateColumns="12.7% 87.3%" h="auto" w="100%" bg="black">
+        <Grid templateColumns="15% 85%" h="auto" w="100%" bg="black">
           <GridItem>
             <Sidebar page={page} />
           </GridItem>
           <GridItem>
             <Flex bg="black" direction="column" w="100%">
               {showHeader && (
-                <Box position="fixed" bg="transparent" w="87.3%">
+                <Box position="fixed" zIndex={50} bg="black" w="85%">
                   {<TopBar width="100%" />}
                 </Box>
               )}
