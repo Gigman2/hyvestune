@@ -39,6 +39,9 @@ export const theme = extendTheme({
     '8xl': '6rem',
   },
   colors: {
+    brandGrey: {
+      100: '#828282'
+    },
     htIndigo: {
       400: '#2a1b8c',
       500: '#12046B',

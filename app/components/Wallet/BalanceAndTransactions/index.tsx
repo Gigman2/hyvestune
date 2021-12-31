@@ -2,20 +2,16 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box, GridItem } from '@chakra-ui/react'
+import { Box, Flex, GridItem, Heading, Select } from '@chakra-ui/react'
 import BalanceCard from '~/components/Cards/BalanceCard'
 import { pixelToRem } from '~/helpers/misc'
+import TransactionHistory from '~/components/Cards/TransactionHistoryCard'
 
 const BalanceAndTransactions = () => {
     return (
         <GridItem>
             <BalanceCard />
-            <Box
-                w="100%"
-                mt={pixelToRem(78)}
-            >
-
-            </Box>
+            <TransactionHistory />
         </GridItem>
     )
 }
