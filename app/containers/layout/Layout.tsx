@@ -11,7 +11,7 @@ const Layout: React.FC<ILayoutProps> = ({ children, showHeader, page }) => {
   return (
     <Box>
       <Box minH="100vh" fontFamily="body" fontSize={{ lg: 'lg' }}>
-        <Grid templateColumns={{ base: "20% 80%", '5xl': '15% 85%' }} h="auto" w="100%" bg="black">
+        <Grid templateColumns={{ base: "15% 85%", }} h="auto" w="100%" bg="black">
           <GridItem>
             <Sidebar page={page} />
           </GridItem>

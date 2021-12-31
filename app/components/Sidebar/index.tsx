@@ -53,7 +53,7 @@ interface ISidebarProps {
 }
 const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
   return (
-    <Flex as="aside" w={{ base: "20%", '5xl': '15%' }} position="fixed" minH="100vh" h="auto" bg="black" direction={'column'} pr={{ base: pixelToRem(60) }} >
+    <Flex as="aside" w={{ base: '15%' }} position="fixed" minH="100vh" h="auto" bg="black" direction={'column'} pr={{ base: pixelToRem(20) }} >
       <Box>
         <Image src={'/images/logo.png'} />
       </Box>
