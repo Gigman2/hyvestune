@@ -132,7 +132,7 @@ const TransactionDetails: React.FC = () => {
                                     Narration
                                 </Heading>
                             </Box>
-                            <Flex justify="flex-end" w="60%">
+                            <Flex justify="flex-end" w="50%">
                                 <Text
                                     fontWeight={400}
                                     fontSize={pixelToRem(14)}

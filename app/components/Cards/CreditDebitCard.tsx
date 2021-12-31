@@ -11,6 +11,7 @@ const CreditDebitCard: React.FC<IPropsCreditDebitCard> = ({ title, value, type }
     const isNegative = (i: number): boolean => i < 0
     return (
         <Box
+            cursor="pointer"
             w="100%"
             h={pixelToRem(74)}
             _hover={{ bg: "rgba(255, 255, 255, 0.12)" }}
