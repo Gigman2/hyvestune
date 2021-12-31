@@ -1,4 +1,5 @@
 import { Box, Flex, Icon, Image, Text, Link } from '@chakra-ui/react';
+import {Link as RemixRouter} from 'remix'
 import React from 'react';
 import { pixelToRem } from '~/helpers/misc';
 
@@ -21,23 +22,23 @@ const Navs = [
     name: 'Menu',
     children: [
       { id: 1, name: 'Home', icon: Home, path: '/dashboard' },
-      { id: 2, name: 'Explore', icon: Search },
-      { id: 3, name: 'Wallet', icon: Card },
+      { id: 2, name: 'Explore', icon: Search, path: '/explore' },
+      { id: 3, name: 'Wallet', icon: Card, path: '/wallet' },
     ],
   },
   {
     name: 'Library',
     children: [
-      { id: 4, name: 'Playlist', icon: Music },
-      { id: 5, name: 'Album', icon: Folder },
+      { id: 4, name: 'Playlist', icon: Music, path: '/playlist' },
+      { id: 5, name: 'Album', icon: Folder, path: '/album' },
     ],
   },
   {
     name: 'NFTs',
     children: [
-      { id: 6, name: 'Market Place', icon: NFT },
-      { id: 7, name: 'My Portfolio', icon: Activity },
-      { id: 8, name: 'Active Bids', icon: Briefcase },
+      { id: 6, name: 'Market Place', icon: NFT , path: '/marketplace' },
+      { id: 7, name: 'My Portfolio', icon: Activity, path: '/portfolio' },
+      { id: 8, name: 'Active Bids', icon: Briefcase, path: 'bids' },
     ],
   },
 ];
@@ -63,10 +64,12 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
               {item.name}
             </Text>
             {item.children.map((child) => (
-              <Flex
-                as={Link}
-                to={child.path}
-                align={'center'}
+              <Link
+                display="flex"
+                as={RemixRouter}
+                to={child?.path}
+                alignItems='center'
+                flexDirection="row"
                 px={6}
                 py={1}
                 _hover={{ textDecoration: 'none' }}
@@ -75,12 +78,13 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
                 mb={4}
                 color={page === child.id ? 'white' : 'whiteAlpha.500'}
                 cursor={'pointer'}
-                _activeLink={{ color: 'white', bg: 'whiteAlpha.200', textDecoration: 'none' }}
-                _active={{ color: 'white', bg: 'whiteAlpha.200', textDecoration: 'none' }}
+                _focus={{ outline: 'none' }}
+                _activeLink={{ color: 'white', bg: 'whiteAlpha.200', outline : "none",  textDecoration: 'none' }}
+                _active={{ color: 'white', bg: 'whiteAlpha.200', outline : 'none', textDecoration: 'none' }}
               >
                 <Icon as={child.icon} />
                 <Text ml={2}>{child.name}</Text>
-              </Flex>
+              </Link>
             ))}
           </Box>
         ))}
