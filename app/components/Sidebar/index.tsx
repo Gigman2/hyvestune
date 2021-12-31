@@ -1,5 +1,5 @@
 import { Box, Flex, Icon, Image, Text, Link } from '@chakra-ui/react';
-import {Link as RemixRouter} from 'remix'
+import { Link as RemixRouter } from 'remix'
 import React from 'react';
 import { pixelToRem } from '~/helpers/misc';
 
@@ -36,7 +36,7 @@ const Navs = [
   {
     name: 'NFTs',
     children: [
-      { id: 6, name: 'Market Place', icon: NFT , path: '/marketplace' },
+      { id: 6, name: 'Market Place', icon: NFT, path: '/marketplace' },
       { id: 7, name: 'My Portfolio', icon: Activity, path: '/portfolio' },
       { id: 8, name: 'Active Bids', icon: Briefcase, path: 'bids' },
     ],
@@ -53,7 +53,7 @@ interface ISidebarProps {
 }
 const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
   return (
-    <Flex as="aside" w="15%" position="fixed" minH="100vh" h="auto" bg="black" direction={'column'} pr={pixelToRem(54)} >
+    <Flex as="aside" w={{ base: '15%' }} position="fixed" minH="100vh" h="auto" bg="black" direction={'column'} pr={{ base: pixelToRem(20) }} >
       <Box>
         <Image src={'/images/logo.png'} />
       </Box>
@@ -79,8 +79,8 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
                 color={page === child.id ? 'white' : 'whiteAlpha.500'}
                 cursor={'pointer'}
                 _focus={{ outline: 'none' }}
-                _activeLink={{ color: 'white', bg: 'whiteAlpha.200', outline : "none",  textDecoration: 'none' }}
-                _active={{ color: 'white', bg: 'whiteAlpha.200', outline : 'none', textDecoration: 'none' }}
+                _activeLink={{ color: 'white', bg: 'whiteAlpha.200', outline: "none", textDecoration: 'none' }}
+                _active={{ color: 'white', bg: 'whiteAlpha.200', outline: 'none', textDecoration: 'none' }}
               >
                 <Icon as={child.icon} />
                 <Text ml={2}>{child.name}</Text>
@@ -100,7 +100,7 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
           </Flex>
         ))}
       </Box>
-    </Flex>
+    </Flex >
     // <Outlet />
   );
 };
