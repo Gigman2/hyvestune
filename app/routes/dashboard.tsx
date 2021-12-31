@@ -5,13 +5,15 @@ import Sidebar from "~/components/Sidebar";
 
 export default function Dashboard() {
   return (
-    <Flex minH={'100vh'}  h="auto" w="100%" bg="black">
-      <Sidebar />
-      <Box w="100%" pos="relative">
-        <Topbar />
-        <Outlet />
-      </Box>
-    </Flex>
+    <Box bg="#121111" h="auto">
+      <Flex minH={'100vh'}  h="auto" w="100%">
+        <Sidebar />
+        <Box w="100%" pos="relative" maxH={'100%'}>
+          <Topbar />
+          <Outlet />
+        </Box>
+      </Flex>
+    </Box>
     // <Outlet />
   );
 }
