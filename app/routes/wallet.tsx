@@ -1,27 +1,24 @@
 import { Box, Grid, GridItem } from '@chakra-ui/react';
+import React from 'react';
 import BalanceCard from '~/components/Cards/BalanceCard';
+import BalanceAndTransactions from '~/components/Wallet/BalanceAndTransactions';
 import Layout from '~/containers/layout/Layout';
 import { pixelToRem } from '~/helpers/misc';
 
-const Wallet = () => {
+const Wallet: React.FC = () => {
   return (
     <Layout page={3} showHeader>
-        <Box  
-         mt={{ xl: pixelToRem(164) }}
+      <Box
+        mt={{ xl: pixelToRem(164) }}
+      >
+        <Grid
+          gap={pixelToRem(106)}
+          templateColumns="repeat(2, 1fr)"
         >
-            <Grid
-            gap={pixelToRem(106)}
-            templateColumns="repeat(2, 1fr)"
-            >
-                <GridItem>
-                    <BalanceCard/>
-
-                </GridItem>
-                <GridItem></GridItem>
-            </Grid>
-
-        </Box>
-    
+          <BalanceAndTransactions />
+          <GridItem></GridItem>
+        </Grid>
+      </Box>
     </Layout>
   );
 };

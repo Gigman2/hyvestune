@@ -16,7 +16,7 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/react-in-jsx-scope": "on",
-        "@typescript-eslint/no-explicit-any": "on",
+        "@typescript-eslint/no-explicit-any": "off",
         "no-var": "error",
         "spaced-comment": [
             "error",
