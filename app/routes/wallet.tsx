@@ -12,6 +12,7 @@ const Wallet: React.FC = () => {
       <Box
         pb={pixelToRem(20)}
         mt={{ xl: pixelToRem(164) }}
+        pl={{ xl: pixelToRem(42) }}
       >
         <Grid
           gap={pixelToRem(106)}

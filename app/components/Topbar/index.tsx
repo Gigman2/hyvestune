@@ -11,8 +11,8 @@ const TopBar: React.FC<ITopBarProps> = ({ width }) => {
       py={pixelToRem(46)}
       pr={pixelToRem(61)}
       pl={pixelToRem(42)}
-      w={width || '100%'}
-      bg="transparent"
+      w={{ base: width || '100%', '5xl': '100%' }}
+      bg="black"
       align="center"
       justifyContent="space-between"
     >
