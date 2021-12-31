@@ -1,5 +1,6 @@
 import { Box, Flex, Icon, Image, Text, Link } from '@chakra-ui/react';
 import React from 'react';
+import { pixelToRem } from '~/helpers/misc';
 
 import {
   Home,
@@ -51,7 +52,7 @@ interface ISidebarProps {
 }
 const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
   return (
-    <Flex as="aside" position="fixed" minH="100vh" h="auto" bg="black" direction={'column'}>
+    <Flex as="aside" w="15%" position="fixed" minH="100vh" h="auto" bg="black" direction={'column'} pr={pixelToRem(54)} >
       <Box>
         <Image src={'/images/logo.png'} />
       </Box>
