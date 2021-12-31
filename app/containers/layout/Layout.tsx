@@ -16,7 +16,7 @@ const Layout: React.FC<ILayoutProps> = ({ children, showHeader, page }) => {
             <Sidebar page={page} />
           </GridItem>
           <GridItem>
-            <Flex h="100vh"  bg="black" direction="column" w="100%">
+            <Flex h="100vh" overflowY="scroll" bg="black" direction="column" w="100%">
               {showHeader && (
                 <Box position="fixed" zIndex={50} bg="black" w="85%">
                   {<TopBar width="100%" />}
