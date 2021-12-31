@@ -1,0 +1,48 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "react-hooks"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "prettier",
+        "plugin:react-hooks/recommended"
+    ],
+    "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/react-in-jsx-scope": "on",
+        "@typescript-eslint/no-explicit-any": "on",
+        "no-var": "error",
+        "spaced-comment": [
+            "error",
+            "always",
+            {
+                "exceptions": [
+                    "-",
+                    "+"
+                ]
+            }
+        ],
+        "prettier/prettier": [
+            "error",
+            {
+                "singleQuote": true,
+                "tabWidth": 2,
+                "printWidth": 100,
+                "spacedComment": false,
+                "endOfLine": "auto"
+            }
+        ]
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    }
+}

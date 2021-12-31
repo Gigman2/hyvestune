@@ -1,16 +1,16 @@
-import { extendTheme } from '@chakra-ui/react'
-import { createBreakpoints } from '@chakra-ui/theme-tools'
+import { extendTheme } from '@chakra-ui/react';
+import { createBreakpoints } from '@chakra-ui/theme-tools';
 
 const breakpoints = createBreakpoints({
-    sm: '36em',
-    md: '48em', // 768
-    lg: '62em', // 992
-    xl: '80em', // 1280
-    '2xl': '85.375em', // 1366
-    '3xl': '90em', // 1440
-    '4xl': '96em', // 1536
-    '5xl': '120em' // 1920
-  })
+  sm: '36em',
+  md: '48em', // 768
+  lg: '62em', // 992
+  xl: '80em', // 1280
+  '2xl': '85.375em', // 1366
+  '3xl': '90em', // 1440
+  '4xl': '96em', // 1536
+  '5xl': '120em', // 1920
+});
 
   export const theme = extendTheme({
     styles: {
@@ -42,17 +42,16 @@ const breakpoints = createBreakpoints({
       htIndigo: {
         400: '#2a1b8c',
         500: '#12046B',
-        600: '#0f0357'
+        600: '#0f0357',
       },
       htPink: {
         400: '#e667b3',
         500: '#E743A6',
-        600: '#e32498'
+        600: '#e32498',
       },
-      htGradient:{
-        1: 'linear-gradient(138.1deg, #12046B -4.72%, #D30B8F 109.38%)',
-        2: ' linear-gradient(96.65deg, #D30B8F 1.51%, rgba(211, 11, 143, 0.58) 130.45%)'
-      }
+      htGradient: {
+        500: 'linear-gradient(138.1deg, #12046B -4.72%, #D30B8F 109.38%)',
+      },
     },
     space: {
       14: '3.5rem',
@@ -82,7 +81,7 @@ const breakpoints = createBreakpoints({
       143: '72rem',
       145: '76rem',
       150: '80rem',
-      155: '90rem'
+      155: '90rem',
     },
     sizes: {
       14: '3.5rem',
@@ -112,7 +111,6 @@ const breakpoints = createBreakpoints({
       143: '72rem',
       145: '76rem',
       150: '80rem',
-      155: '90rem'
-    }
-  })
-  
+      155: '90rem',
+    },
+});
