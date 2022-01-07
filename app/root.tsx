@@ -3,10 +3,17 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from 'rem
 import type { MetaFunction } from 'remix';
 import { ChakraProvider } from '@chakra-ui/react';
 import { theme } from './theme/theme';
+import styles from '~/assets/styles/index.css'
+import { ComponentContextProvider } from './context/component';
+import { ModalContextProvider } from './context/model';
 
 export const meta: MetaFunction = () => {
   return { title: 'HyvesTune' };
 };
+
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
 
 const Document: FC<{ children: ReactNode; title?: string }> = ({ children, title }) => {
   return (
@@ -32,7 +39,11 @@ export default function App() {
   return (
     <Document>
       <ChakraProvider theme={theme}>
-        <Outlet />
+        <ComponentContextProvider>
+          <ModalContextProvider>
+            <Outlet />
+          </ModalContextProvider>
+        </ComponentContextProvider>
       </ChakraProvider>
     </Document>
   );
