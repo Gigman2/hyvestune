@@ -37,15 +37,15 @@ const Document: FC<{ children: ReactNode; title?: string }> = ({ children, title
 
 export default function App() {
   return (
-    <Document>
-      <ChakraProvider theme={theme}>
-        <ComponentContextProvider>
+    <ComponentContextProvider>
+      <Document>
+        <ChakraProvider theme={theme}>
           <ModalContextProvider>
             <Outlet />
           </ModalContextProvider>
-        </ComponentContextProvider>
-      </ChakraProvider>
-    </Document>
+        </ChakraProvider>
+      </Document>
+    </ComponentContextProvider>
   );
 }
 

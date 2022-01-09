@@ -2,7 +2,12 @@ import { Box, Flex, Heading, Grid, GridItem } from '@chakra-ui/react';
 import { pixelToRem } from '~/helpers/misc';
 import ExploreCard from '~/components/Cards/ExploreCard';
 
-const Top100Hits = () => {
+interface ITop10Hits {
+  _data?: any[]
+  title: string
+}
+
+const Top100Hits: React.FC<ITop10Hits> = ({ _data, title }) => {
   const data = [
     {
       song: 'Blinding Lights',
@@ -35,7 +40,7 @@ const Top100Hits = () => {
           lineHeight={{ xl: pixelToRem(21.78) }}
           fontSize={{ xl: pixelToRem(16) }}
         >
-          Top 100 Hits
+          {title}
         </Heading>
         <Box mt={{ xl: pixelToRem(17) }} overflowX="hidden" maxW={{ base: '100%' }} pos="relative">
           <Grid
@@ -43,7 +48,7 @@ const Top100Hits = () => {
             w="100%"
             templateColumns={'repeat(4,1fr)'}
           >
-            {data.map((card, index: number) => (
+            {(_data || data).map((card, index: number) => (
               <GridItem>
                 <ExploreCard showSubTexts {...card} key={((i) => i)(index)} />
               </GridItem>

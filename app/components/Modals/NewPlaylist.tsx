@@ -9,6 +9,8 @@ interface Props { }
 
 const NewPlaylist = () => {
     const { isOpen, onClose, data } = useComponent()
+
+    console.log(data, "wAS")
     return <ModalWrapper
         isCentered size='2xl' isOpen={isOpen} onClose={onClose}
     >
@@ -50,6 +52,10 @@ const NewPlaylist = () => {
             <Button
                 _focus={{ outline: 'none' }}
                 _hover={{ outline: 'none' }}
+                onClick={() => {
+                    data.func(true)
+                    onClose()
+                }}
                 title="Create" w={pixelToRem(261)} h={pixelToRem(58)} mt={pixelToRem(86)} />
         </Box>
     </ModalWrapper>

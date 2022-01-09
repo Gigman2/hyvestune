@@ -4,16 +4,20 @@ import Layout from '~/containers/layout/Layout'
 import Music from '~/assets/images/music.svg'
 import { pixelToRem } from '~/helpers/misc'
 import useComponent from '~/context/component'
+import LikedPlaylist from '~/components/Cards/Playlist/LikedPlaylist'
+import CreatedPlaylist from '~/components/Cards/Playlist/CreatedPlaylist'
+import NewPlaylist from '~/components/Cards/Playlist/NewPlaylist'
 
 interface Props { }
 
 const Playlist = () => {
+    const [open, setOpen] = React.useState<boolean>(false)
     const { handleModalClick } = useComponent()
     return <Layout
         page={4}
         showHeader
     >
-        <Flex
+        {!open && <Flex
             h="100%"
             w="100%" align="center" justify="center" direction="column" >
             <Flex w="50%"
@@ -35,7 +39,7 @@ const Playlist = () => {
                 </Heading>
                 <Button
                     onClick={() => {
-                        handleModalClick('new-playlist')
+                        handleModalClick('new-playlist', { func: setOpen })
                     }}
                     _focus={{ outline: 'none' }}
                     _hover={{ outline: 'none' }}
@@ -50,7 +54,36 @@ const Playlist = () => {
                     Create
                 </Button>
             </Flex>
-        </Flex>
+        </Flex>}
+        {open && <Box w="100%"
+            mt={{ xl: pixelToRem(164) }}
+        >
+            <Flex
+                direction="column"
+                w="100%"
+                pl={pixelToRem(73)}
+            >
+
+                <Grid
+                    py={3}
+                    gap={{ base: pixelToRem(54), '5xl': pixelToRem(80) }}
+                    w="100%"
+                    templateColumns={'repeat(4,1fr)'}
+                >
+
+                    <GridItem>
+                        <LikedPlaylist bg="linear-gradient(144.19deg, #E743A6 2%, #12046B 144.79%)" />
+                    </GridItem>
+                    <GridItem>
+                        <CreatedPlaylist bg="#333333" />
+                    </GridItem>
+                    <GridItem>
+                        <NewPlaylist bg="transparent" />
+                    </GridItem>
+                </Grid>
+            </Flex>
+
+        </Box>}
 
     </Layout>
 }

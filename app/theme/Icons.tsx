@@ -2,7 +2,59 @@ import { createIcon } from '@chakra-ui/icon';
 import React from 'react';
 
 
+export const PlusCircle = createIcon({
+  displayName: 'PlusCircle',
+  viewBox: '0 0 20 20',
+  path: (
+    <>
+      <path d="M10.0003 18.3334C14.6027 18.3334 18.3337 14.6024 18.3337 10C18.3337 5.39765 14.6027 1.66669 10.0003 1.66669C5.39795 1.66669 1.66699 5.39765 1.66699 10C1.66699 14.6024 5.39795 18.3334 10.0003 18.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M10 6.66669V13.3334" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M6.66699 10H13.3337" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </>
+  )
+})
 
+export const PlayPlug = createIcon({
+  displayName: 'PlayPlug',
+  viewBox: '0 0 16 16',
+  path: (
+    <>
+      <path d="M14.2661 9.51616C15.258 8.74868 15.258 7.25122 14.2661 6.48374C11.2685 4.16434 7.92133 2.33619 4.34979 1.06771L3.69732 0.835971C2.44904 0.392631 1.13053 1.23719 0.961542 2.52574C0.489382 6.12595 0.489382 9.87394 0.961541 13.4742C1.13053 14.7627 2.44904 15.6073 3.69731 15.1639L4.34979 14.9322C7.92133 13.6637 11.2685 11.8356 14.2661 9.51616Z" fill="currentColor" />
+    </>
+  ),
+});
+
+export const Favorite = createIcon({
+  displayName: 'Favorite',
+  viewBox: '0 0 34 30',
+  path: (
+    <svg width="34" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30.2602 3.91505C29.494 3.14856 28.5844 2.54052 27.5832 2.12568C26.582 1.71084 25.5089 1.49731 24.4252 1.49731C23.3414 1.49731 22.2683 1.71084 21.2671 2.12568C20.266 2.54052 19.3563 3.14856 18.5902 3.91505L17.0002 5.50505L15.4102 3.91505C13.8626 2.36751 11.7637 1.49812 9.57518 1.49812C7.38663 1.49812 5.28772 2.36751 3.74018 3.91505C2.19264 5.46259 1.32324 7.5615 1.32324 9.75005C1.32324 11.9386 2.19264 14.0375 3.74018 15.5851L5.33018 17.1751L17.0002 28.8451L28.6702 17.1751L30.2602 15.5851C31.0267 14.8189 31.6347 13.9093 32.0496 12.9081C32.4644 11.9069 32.6779 10.8338 32.6779 9.75005C32.6779 8.66632 32.4644 7.59321 32.0496 6.59202C31.6347 5.59083 31.0267 4.68119 30.2602 3.91505V3.91505Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )
+})
+
+export const Curves = createIcon({
+  displayName: 'PlayPlug',
+  viewBox: '0 0 16 16',
+  path: (
+    <>
+      <path opacity="0.118234" fill-rule="evenodd" clip-rule="evenodd" d="M0 16.782C0 16.782 9.39374 17.8214 25.4973 27.0589C41.6008 36.2965 62.216 21.9205 62.216 21.9205C62.216 21.9205 95.6463 2.3822 128.923 11.8123C162.199 21.2425 186.106 -2.3979 205.771 4.70722C225.436 11.8123 230.86 32.1974 245.265 27.0589C250.638 25.1421 258.01 25.0005 264.135 20.8954C268.956 17.6643 277.675 6.29914 277.675 6.29914L285.651 8.2927L294.303 12.3529L311.318 2H331V93.2465C331 102.083 323.837 109.247 315 109.247H16C7.1635 109.247 5.1337e-05 102.083 4.60189e-05 93.2465L0 16.782Z" fill="url(#paint0_linear_58_92)" />
+      <path d="M0 15.4335C0 15.4335 9.36121 16.4732 25.409 25.7142C41.4568 34.9553 62.0006 20.5739 62.0006 20.5739C62.0006 20.5739 95.315 1.02822 128.476 10.4619C161.637 19.8956 185.462 -3.75367 205.058 3.35412C224.655 10.4619 230.06 30.8546 244.415 25.7142C258.77 20.5739 263.807 25.8816 269.923 13.4706C276.04 1.05955 282.069 6.76685 288.867 10.4619C295.665 14.157 304.016 4.88384 304.016 4.88384" stroke="url(#paint1_linear_58_92)" stroke-width="2.5" />
+      <defs>
+        <linearGradient id="paint0_linear_58_92" x1="322.631" y1="4.28476" x2="54.8037" y2="135.245" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#12046B" />
+          <stop offset="0.0423345" stop-color="#D30B8F" />
+          <stop offset="1" stop-color="#C20B83" />
+        </linearGradient>
+        <linearGradient id="paint1_linear_58_92" x1="304.016" y1="2" x2="0" y2="2" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#12046B" />
+          <stop offset="1" stop-color="#C10C84" />
+        </linearGradient>
+      </defs>
+    </>
+  ),
+})
 
 export const Home = createIcon({
   displayName: 'Home',

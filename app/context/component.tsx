@@ -8,11 +8,11 @@ const ComponentContext = createContext({})
 export const ComponentContextProvider: React.FC = ({ children }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [modal, setModal] = React.useState<string>('')
-    const [data, setData] = React.useState<unknown>('')
+    const [data, setData] = React.useState<any>(undefined)
 
 
 
-    const handleModalClick = (item: React.SetStateAction<string>, data?: unknown) => {
+    const handleModalClick = (item: React.SetStateAction<string>, data?: any) => {
         setModal(item)
         setData(data)
         onOpen()
