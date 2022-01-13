@@ -28,6 +28,7 @@ const ContinuePlaying = () => {
                     w="100%"
                 >
                     <Text
+                        fontFamily="Lato"
                         fontWeight={600}
                         color="white"
                         fontSize={pixelToRem(14)}
@@ -37,6 +38,7 @@ const ContinuePlaying = () => {
                         Continue
                     </Text>
                     <Heading
+                        fontFamily="Lato"
                         fontWeight={600}
                         color="white"
                         fontSize={pixelToRem(18)}
@@ -46,6 +48,7 @@ const ContinuePlaying = () => {
                         Thriumphant
                     </Heading>
                     <Text
+                        fontFamily="Lato"
                         fontWeight={600}
                         color="white"
                         fontSize={pixelToRem(13)}

@@ -58,13 +58,16 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
         <Image src={'/images/logo.png'} />
       </Box>
       <Box mt={6} ml={6}>
-        {Navs.map((item) => (
-          <Box mb={8}>
+        {Navs.map((item, iz) => (
+          <Box mb={8}
+            key={(i => i)(iz)}
+          >
             <Text color="white" fontWeight={400} mb={4}>
               {item.name}
             </Text>
-            {item.children.map((child) => (
+            {item.children.map((child, index) => (
               <Link
+                key={(i => i)(index)}
                 display="flex"
                 as={RemixRouter}
                 to={child?.path}
@@ -91,8 +94,8 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
       </Box>
 
       <Box mt={6} ml={8}>
-        {NavsFooter.map((item) => (
-          <Flex align={'center'} mb={3} color="white">
+        {NavsFooter.map((item, index) => (
+          <Flex align={'center'} mb={3} key={((i) => i)(index)} color="white">
             <Icon as={item.icon} />
             <Text color="white" fontWeight={400} ml={2}>
               {item.name}

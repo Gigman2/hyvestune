@@ -4,14 +4,15 @@ import { pixelToRem } from '~/helpers/misc';
 import { Bell } from '~/theme/Icons';
 interface ITopBarProps {
   width?: string | number;
+  bg?: any
 }
-const TopBar: React.FC<ITopBarProps> = ({ width }) => {
+const TopBar: React.FC<ITopBarProps> = ({ width, bg }) => {
   return (
     <Flex
       py={pixelToRem(46)}
       pr={pixelToRem(61)}
       pl={pixelToRem(42)}
-      bg="black"
+      bg={bg || "black"}
       w="85%"
       align="center"
       justifyContent="space-between"

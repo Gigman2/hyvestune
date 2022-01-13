@@ -7,8 +7,13 @@ import ExploreCard from '~/components/Cards/ExploreCard';
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const MotionFlex = motion(Flex);
-
-const NewReleases = () => {
+interface INewPlaylistProps {
+  title?: string
+  headerFontSize?: any, headerLineHeight?: any, headerFontWeight?: any
+  headerFontFamily?: any
+  textFontFamily?: any
+}
+const NewReleases: React.FC<INewPlaylistProps> = ({ title, headerFontSize, headerLineHeight, headerFontWeight, headerFontFamily, textFontFamily }) => {
   const data = [
     {
       song: 'Love Nwatiti',
@@ -58,12 +63,13 @@ const NewReleases = () => {
     <Box mt={{ xl: pixelToRem(164) }}>
       <Flex pl={{ xl: pixelToRem(42) }} direction="column">
         <Heading
+          fontFamily={headerFontFamily || "Inter"}
           color="white"
-          fontWeight={700}
-          lineHeight={{ xl: pixelToRem(21.78) }}
-          fontSize={{ xl: pixelToRem(16) }}
+          fontWeight={headerFontWeight || 700}
+          lineHeight={headerLineHeight || { xl: pixelToRem(21.78) }}
+          fontSize={headerFontSize || { xl: pixelToRem(16) }}
         >
-          New Releases
+          {title || "New Releases"}
         </Heading>
         <Box mt={{ xl: pixelToRem(17) }} overflowX="hidden" maxW={{ base: '100%' }} pos="relative">
           <MotionFlex
@@ -86,8 +92,10 @@ const NewReleases = () => {
                 templateColumns="repeat(4, 1fr)"
               >
                 {card.map((card, index) => (
-                  <GridItem>
-                    <ExploreCard showSubTexts {...card} key={((i) => i)(index)} />
+                  <GridItem
+                    key={((i) => i)(index)}
+                  >
+                    <ExploreCard textFontFamily={textFontFamily} showSubTexts {...card} />
                   </GridItem>
                 ))}
               </Grid>

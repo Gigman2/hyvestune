@@ -5,9 +5,12 @@ import ExploreCard from '~/components/Cards/ExploreCard';
 interface ITop10Hits {
   _data?: any[]
   title: string
+  headerFontSize?: any, headerLineHeight?: any, headerFontWeight?: any
+  headerFontFamily?: any
+  textFontFamily?: any
 }
 
-const Top100Hits: React.FC<ITop10Hits> = ({ _data, title }) => {
+const Top100Hits: React.FC<ITop10Hits> = ({ _data, title, headerFontSize, headerLineHeight, headerFontWeight, headerFontFamily, textFontFamily }) => {
   const data = [
     {
       song: 'Blinding Lights',
@@ -36,9 +39,10 @@ const Top100Hits: React.FC<ITop10Hits> = ({ _data, title }) => {
       <Flex pl={{ xl: pixelToRem(42) }} direction="column">
         <Heading
           color="white"
-          fontWeight={700}
-          lineHeight={{ xl: pixelToRem(21.78) }}
-          fontSize={{ xl: pixelToRem(16) }}
+          fontFamily={headerFontFamily || "Inter"}
+          fontWeight={headerFontWeight || 700}
+          lineHeight={headerLineHeight || { xl: pixelToRem(21.78) }}
+          fontSize={headerFontSize || { xl: pixelToRem(16) }}
         >
           {title}
         </Heading>
@@ -49,8 +53,10 @@ const Top100Hits: React.FC<ITop10Hits> = ({ _data, title }) => {
             templateColumns={'repeat(4,1fr)'}
           >
             {(_data || data).map((card, index: number) => (
-              <GridItem>
-                <ExploreCard showSubTexts {...card} key={((i) => i)(index)} />
+              <GridItem
+                key={((i) => i)(index)}
+              >
+                <ExploreCard textFontFamily={textFontFamily} showSubTexts {...card} />
               </GridItem>
             ))}
           </Grid>

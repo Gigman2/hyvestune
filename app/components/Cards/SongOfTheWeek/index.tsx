@@ -25,6 +25,7 @@ const SongOfTheWeek: React.FC = () => {
                     pb={pixelToRem(29)}
                 >
                     <Text
+                        fontFamily="Lato"
                         fontWeight={600}
                         color="white"
                         fontSize={pixelToRem(14)}
@@ -34,6 +35,7 @@ const SongOfTheWeek: React.FC = () => {
                         Song of the Week
                     </Text>
                     <Heading
+                        fontFamily="Lato"
                         fontWeight={400}
                         color="white"
                         fontSize={pixelToRem(36)}
@@ -43,6 +45,7 @@ const SongOfTheWeek: React.FC = () => {
                         Happier Than Ever
                     </Heading>
                     <Text
+                        fontFamily="Lato"
                         fontWeight={400}
                         color="white"
                         fontSize={pixelToRem(18)}

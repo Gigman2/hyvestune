@@ -26,8 +26,8 @@ const Dashboard = () => {
         </GridItem>
       </Grid>
     </Box>
-    <Top100Hits title="Top Trending" />
-    <Top100Hits title="Recommended" />
+    <Top100Hits title="Top Trending" headerFontFamily="Lato" textFontFamily="Lato" />
+    <Top100Hits title="Recommended" headerFontFamily="Lato" textFontFamily="Lato" />
   </Layout>;
 };
 
