@@ -18,6 +18,7 @@ const TransactionDetails: React.FC = () => {
                         pt={pixelToRem(26)}
                         w="100%" justify="center" align="center" >
                         <Heading
+                            fontFamily="Inter"
                             color="white"
                             fontWeight={600}
                             fontSize={pixelToRem(16)}
@@ -50,6 +51,7 @@ const TransactionDetails: React.FC = () => {
                         justify="center"
                     >
                         <Text
+                            fontFamily="Inter"
                             fontWeight={600}
                             fontSize={pixelToRem(18)}
                             lineHeight={pixelToRem(21.78)}
@@ -69,6 +71,7 @@ const TransactionDetails: React.FC = () => {
                                 w="50%"
                             >
                                 <Heading
+                                    fontFamily="Inter"
                                     fontWeight={600}
                                     fontSize={pixelToRem(18)}
                                     lineHeight={pixelToRem(21.78)}
@@ -82,6 +85,7 @@ const TransactionDetails: React.FC = () => {
                                 w="50%"
                             >
                                 <Text
+                                    fontFamily="Inter"
                                     fontWeight={400}
                                     fontSize={pixelToRem(14)}
                                     lineHeight={pixelToRem(16.94)}
@@ -98,6 +102,7 @@ const TransactionDetails: React.FC = () => {
                                 w="50%"
                             >
                                 <Heading
+                                    fontFamily="Inter"
                                     fontWeight={600}
                                     fontSize={pixelToRem(18)}
                                     lineHeight={pixelToRem(21.78)}
@@ -111,7 +116,7 @@ const TransactionDetails: React.FC = () => {
                                 w="50%"
                             >
                                 <Text
-
+                                    fontFamily="Inter"
                                     fontWeight={400}
                                     fontSize={pixelToRem(14)}
                                     lineHeight={pixelToRem(16.94)}
@@ -124,6 +129,7 @@ const TransactionDetails: React.FC = () => {
                         <Flex mt={pixelToRem(49)} direction="row" justify="space-between" >
                             <Box w="50%">
                                 <Heading
+                                    fontFamily="Inter"
                                     fontWeight={600}
                                     fontSize={pixelToRem(18)}
                                     lineHeight={pixelToRem(21.78)}
@@ -134,6 +140,7 @@ const TransactionDetails: React.FC = () => {
                             </Box>
                             <Flex justify="flex-end" w="50%">
                                 <Text
+                                    fontFamily="Inter"
                                     fontWeight={400}
                                     fontSize={pixelToRem(14)}
                                     lineHeight={pixelToRem(16.94)}
@@ -166,6 +173,7 @@ const TransactionDetails: React.FC = () => {
 
                             >
                                 <Heading
+                                    fontFamily="Inter"
                                     color="white"
                                     fontWeight={600}
                                     fontSize={pixelToRem(18)}

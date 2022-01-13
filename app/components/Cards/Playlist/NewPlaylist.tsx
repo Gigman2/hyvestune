@@ -4,10 +4,12 @@ import { pixelToRem } from '~/helpers/misc'
 import { BiPlus } from 'react-icons/bi'
 interface INewPlaylistProps {
     bg?: any
+    onClick?: () => void
 }
 
-const NewPlaylist: React.FC<INewPlaylistProps> = ({ bg }) => {
+const NewPlaylist: React.FC<INewPlaylistProps> = ({ bg, onClick }) => {
     return <Box
+        onClick={onClick}
         border="2px dashed #fff"
         backgroundSize="2px 3px"
         spacing={2}

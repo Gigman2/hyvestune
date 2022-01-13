@@ -5,12 +5,12 @@ import { pixelToRem } from '~/helpers/misc'
 import SelectMusic from '../Cards/SelectMusic'
 
 interface IData {
-    title: string
-    artist: string,
+    title?: string
+    artist?: string,
 }
 
 interface IMusicSelectList {
-    data: IData[],
+    data?: IData[],
     number?: boolean,
     showHeader?: boolean
     optionsTemplateColumns?: any

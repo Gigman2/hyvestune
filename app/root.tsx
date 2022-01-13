@@ -5,7 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { theme } from './theme/theme';
 import styles from '~/assets/styles/index.css'
 import { ComponentContextProvider } from './context/component';
-import { ModalContextProvider } from './context/model';
+import { ModalContextProvider } from './context/modal';
 
 export const meta: MetaFunction = () => {
   return { title: 'HyvesTune' };

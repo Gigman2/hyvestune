@@ -78,7 +78,7 @@ const Playlist = () => {
                         <CreatedPlaylist bg="#333333" />
                     </GridItem>
                     <GridItem>
-                        <NewPlaylist bg="transparent" />
+                        <NewPlaylist bg="transparent" onClick={() => handleModalClick('new-playlist', { func: setOpen })} />
                     </GridItem>
                 </Grid>
             </Flex>

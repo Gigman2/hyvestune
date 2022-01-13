@@ -2,22 +2,35 @@ import { Box, Flex, Heading, Icon, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 import { pixelToRem } from '~/helpers/misc'
 import { PlayPlug } from '~/theme/Icons'
-import Tems from '~/assets/images/tems.png'
-import OuterTems from '~/assets/images/outer-tems.png'
 
 
-interface Props { }
+interface IMusicHeaderProps {
+    outerImage?: string
+    filter?: any
+    profileImage?: string
+    showAdditionalInfo?: boolean
+    pageTitle?: string
+    pageAdditionalTitles?: string
+    profiledColor?: any
+    outeredColor?: any
+}
 
-const MusicHeader: React.FC = () => {
+const MusicHeader: React.FC<IMusicHeaderProps> = ({ outerImage, filter, profileImage, showAdditionalInfo, pageTitle, pageAdditionalTitles, profiledColor, outeredColor }) => {
     return (
         <Box
             h={pixelToRem(452.12)}
             position="relative"
             w="100%" >
-            <Image
-                filter={"blur(40px)"}
+            {outeredColor && <Box
+                bg={outeredColor}
+                filter={filter || "blur(40px)"}
                 h={pixelToRem(452.12)}
-                w="100%" src={OuterTems} />
+                w="100%"
+            />}
+            {outerImage && <Image
+                filter={filter || "blur(40px)"}
+                h={pixelToRem(452.12)}
+                w="100%" src={outerImage} />}
             <Flex
                 position="absolute" top={0} w="100%" h="100%"
                 align="flex-end"
@@ -32,8 +45,17 @@ const MusicHeader: React.FC = () => {
                             <Box
                                 mr={pixelToRem(24)}
                             >
+                                {profiledColor && <Box
+                                    bg={profiledColor}
+                                    borderRadius={pixelToRem(20)}
+                                    w={pixelToRem(230)} h={pixelToRem(246)}
+                                />}
 
-                                <Image w={pixelToRem(230)} h={pixelToRem(246)} src={Tems} />
+
+
+                                {profileImage && <Image w={pixelToRem(230)}
+                                    borderRadius={pixelToRem(20)}
+                                    h={pixelToRem(246)} src={profileImage} />}
                             </Box>
                             <Flex
                                 direction="column"
@@ -47,16 +69,16 @@ const MusicHeader: React.FC = () => {
                                     fontSize={pixelToRem(18)}
                                     lineHeight={pixelToRem(21.78)}
                                     color="white"
-                                >EP</Text>
+                                >{pageTitle}</Text>
                                 <Heading
                                     fontFamily="Inter"
                                     fontWeight={400}
                                     fontSize={pixelToRem(48)}
                                     lineHeight={pixelToRem(58.09)}
                                     color="white"
-                                >If Orange Was a Place</Heading>
+                                >{pageAdditionalTitles}</Heading>
 
-                                <Text
+                                {showAdditionalInfo && <Text
                                     mt={pixelToRem(19)}
                                     mb={pixelToRem(32)}
                                     fontFamily="Inter"
@@ -76,9 +98,9 @@ const MusicHeader: React.FC = () => {
                                         Tems
                                     </Text>
                                     . 2021  . 5 songs   . 20 minutes 4 secs
-                                </Text>
+                                </Text>}
 
-                                <Flex
+                                {showAdditionalInfo && <Flex
                                     justify={"center"}
                                     align="center"
                                     bg="#E743A6"
@@ -87,7 +109,7 @@ const MusicHeader: React.FC = () => {
                                     borderRadius={pixelToRem(41)}
                                 >
                                     <Icon color="white" as={PlayPlug} boxSize={4} />
-                                </Flex>
+                                </Flex>}
                             </Flex>
 
                         </Flex>

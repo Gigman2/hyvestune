@@ -17,10 +17,11 @@ const BalanceCard = () => {
             <Flex direction="column" w="100%">
                 <Flex w="100%" justify="space-between" direction="row" >
                     <Text
-                    color="white"
-                    fontWeight={400}
-                    fontSize={pixelToRem(18)}
-                    lineHeight={pixelToRem(21.78)}
+                        fontFamily="Inter"
+                        color="white"
+                        fontWeight={400}
+                        fontSize={pixelToRem(18)}
+                        lineHeight={pixelToRem(21.78)}
                     >
                         your wallet balance
                     </Text>
@@ -30,20 +31,21 @@ const BalanceCard = () => {
 
                 </Flex>
                 <Box
-                mt={pixelToRem(22)}
+                    mt={pixelToRem(22)}
                 >
                     <Heading
-                    color="white"
-                    letterSpacing={pixelToRem(2)}
-                    fontWeight={700}
-                    fontSize={pixelToRem(36)}
-                    lineHeight={pixelToRem(43.57)}
+                        fontFamily="Inter"
+                        color="white"
+                        letterSpacing={pixelToRem(2)}
+                        fontWeight={700}
+                        fontSize={pixelToRem(36)}
+                        lineHeight={pixelToRem(43.57)}
                     >
                         $678890
                     </Heading>
                 </Box>
                 <Box bottom={pixelToRem(23)} right={pixelToRem(23)} position="absolute"  >
-                    <Image w={pixelToRem(73)} h={pixelToRem(29)}  src={IOTA} />
+                    <Image w={pixelToRem(73)} h={pixelToRem(29)} src={IOTA} />
                 </Box>
             </Flex>
         </Box>

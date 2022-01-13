@@ -29,8 +29,8 @@ const Navs = [
   {
     name: 'Library',
     children: [
-      { id: 4, name: 'Playlist', icon: Music, path: '/playlist' },
-      { id: 5, name: 'Album', icon: Folder, path: '/album' },
+      { id: 4, name: 'Playlist', icon: Music, path: '/playlists' },
+      { id: 5, name: 'Album', icon: Folder, path: '/albums' },
     ],
   },
   {

@@ -40,6 +40,7 @@ const TransactionHistory: React.FC = () => {
                 align="center"
             >
                 <Heading
+                    fontFamily="Inter"
                     fontWeight={700}
                     color="white"
                     lineHeight={pixelToRem(29.05)}
@@ -59,6 +60,7 @@ const TransactionHistory: React.FC = () => {
                 direction="column"
             >
                 <Text
+                    fontFamily="Inter"
                     mt={pixelToRem(4)}
                     lineHeight={pixelToRem(21.6)}
                     fontSize={pixelToRem(18)}
