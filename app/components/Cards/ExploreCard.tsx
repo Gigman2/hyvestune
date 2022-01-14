@@ -66,6 +66,7 @@ const ExploreCard: React.FC<IPropsExploreCard> = ({
               lineHeight={{ md: pixelToRem(14.52) }}
               fontSize={{ md: pixelToRem(12) }}
               mt={pixelToRem(7)}
+              color={"gray.600"}
             >
               {artist}
             </Text>

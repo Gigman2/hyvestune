@@ -4,9 +4,9 @@ import { Outlet } from 'remix';
 
 
 const Dashboard = () => {
-  return <Box>
+  return <>
       <Outlet />
-    </Box>
+    </>
 };
 
 export default Dashboard;

@@ -15,7 +15,7 @@ export default function Login() {
       pos="relative"
     >
       <Box
-        bg="htGradient.500"
+        bg="htGradient.1"
         w="100%"
         h="100%"
         pos={'absolute'}

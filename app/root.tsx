@@ -4,6 +4,7 @@ import type { MetaFunction } from 'remix';
 import { ChakraProvider } from '@chakra-ui/react';
 import { theme } from './theme/theme';
 import styles from '~/assets/styles/index.css'
+import publicStyles from 'public/styles.css'
 import { ComponentContextProvider } from './context/component';
 import { ModalContextProvider } from './context/modal';
 
@@ -12,7 +13,7 @@ export const meta: MetaFunction = () => {
 };
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [{ rel: "stylesheet", href: styles }, {rel: "stylesheet", href: publicStyles}];
 }
 
 const Document: FC<{ children: ReactNode; title?: string }> = ({ children, title }) => {
