@@ -1,7 +1,7 @@
 import { Box, Flex, Grid, GridItem } from '@chakra-ui/react';
 import React, { ReactNode } from 'react';
-import TopBar from '~/components/Topbar';
-import Sidebar from '~/components/Sidebar';
+import TopBar from '~/containers/layout/Topbar';
+import Sidebar from '~/containers/layout/Sidebar';
 interface ILayoutProps {
   children?: ReactNode;
   showHeader?: boolean;

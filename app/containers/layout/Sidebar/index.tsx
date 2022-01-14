@@ -22,23 +22,23 @@ const Navs = [
     name: 'Menu',
     children: [
       { id: 1, name: 'Home', icon: Home, path: '/dashboard' },
-      { id: 2, name: 'Explore', icon: Search, path: '/explore' },
-      { id: 3, name: 'Wallet', icon: Card, path: '/wallet' },
+      { id: 2, name: 'Explore', icon: Search, path: '/dashboard/explore' },
+      { id: 3, name: 'Wallet', icon: Card, path: '/dashboard/wallet' },
     ],
   },
   {
     name: 'Library',
     children: [
-      { id: 4, name: 'Playlist', icon: Music, path: '/playlists' },
-      { id: 5, name: 'Album', icon: Folder, path: '/albums' },
+      { id: 4, name: 'Playlist', icon: Music, path: '/dashboard/playlist' },
+      { id: 5, name: 'Album', icon: Folder, path: '/dashboard/albums' },
     ],
   },
   {
     name: 'NFTs',
     children: [
-      { id: 6, name: 'Market Place', icon: NFT, path: '/marketplace' },
-      { id: 7, name: 'My Portfolio', icon: Activity, path: '/portfolio' },
-      { id: 8, name: 'Active Bids', icon: Briefcase, path: 'bids' },
+      { id: 6, name: 'Market Place', icon: NFT, path: '/dashboard/marketplace' },
+      { id: 7, name: 'My Portfolio', icon: Activity, path: '/dashboard/portfolio' },
+      { id: 8, name: 'Active Bids', icon: Briefcase, path: 'dashboard/bids' },
     ],
   },
 ];
