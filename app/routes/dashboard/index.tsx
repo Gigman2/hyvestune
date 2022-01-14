@@ -1,10 +1,12 @@
 import { Box, Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
 import ContinuePlaying from '~/components/Cards/ContinuePlaying';
-import SongOfTheWeek from '~/components/Cards/SongOfTheWeek';
+import SongOfTheWeek from '~/components/Cards/DoubleWBanner';
 import Top100Hits from '~/components/Explore/Top100Hits';
 import Layout from '~/containers/layout/Layout';
 import { pixelToRem } from '~/helpers/misc';
+import Billie from '~/assets/images/billie.png'
+import { PlayPlug } from '~/theme/Icons'
 
 const Dashboard = () => {
   return <Layout page={1} showHeader >
@@ -19,7 +21,12 @@ const Dashboard = () => {
         gap={pixelToRem(37)}
       >
         <GridItem>
-          <SongOfTheWeek />
+          <SongOfTheWeek color="htGradient.2" image={Billie} context={
+            {heading: 'Song of the Week',
+             main: 'Happier Than Ever ', 
+             subtext:'By: Billie Elish',
+             icon: PlayPlug
+            }} />
         </GridItem>
         <GridItem>
           <ContinuePlaying />

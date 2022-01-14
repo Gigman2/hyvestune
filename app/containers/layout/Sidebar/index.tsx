@@ -38,7 +38,7 @@ const Navs = [
     children: [
       { id: 6, name: 'Market Place', icon: NFT, path: '/dashboard/marketplace' },
       { id: 7, name: 'My Portfolio', icon: Activity, path: '/dashboard/portfolio' },
-      { id: 8, name: 'Active Bids', icon: Briefcase, path: 'dashboard/bids' },
+      { id: 8, name: 'Active Bids', icon: Briefcase, path: '/dashboard/active-bids' },
     ],
   },
 ];
@@ -54,10 +54,10 @@ interface ISidebarProps {
 const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
   return (
     <Flex  minH="100vh" h="auto" w="260px" bg="black" direction={'column'}>
-        <Box>
-            <Image src={'/images/logo.png'} />
-        </Box>
-      <Box mt={6} ml={8}>
+      <Box>
+          <Image src={'/images/logo.png'} />
+      </Box>
+      <Box mt={4} ml={8}>
           {Navs.map(item => (
               <Box mb={8}>
                   <Text color="white" fontWeight={400} mb={4}>{item.name}</Text>
@@ -83,7 +83,7 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
           )}
       </Box>
 
-      <Box mt={6} ml={8}>
+      <Box mt={4} ml={8}>
           {NavsFooter.map(item => (
               <Flex align={'center'} mb={3} color="white" cursor="pointer">
                   <Icon as={item.icon}/>
@@ -91,7 +91,8 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
               </Flex>)
           )}
       </Box>
-      <Flex as="aside"  position="fixed" minH="100vh" h="auto" bg="black" direction={'column'} pr={{ base: pixelToRem(20) }} >
+
+      <Flex as="aside"  position="fixed" minH="100vh" h="100vh" bg="black" direction={'column'} pr={{ base: pixelToRem(20) }} >
         <Box>
           <Image src={'/images/logo.png'} />
         </Box>
@@ -111,12 +112,13 @@ const Sidebar: React.FC<ISidebarProps> = ({ page }) => {
                   to={child?.path}
                   alignItems='center'
                   flexDirection="row"
+                  fontSize={15}
                   px={6}
                   py={1}
                   _hover={{ textDecoration: 'none' }}
                   bg={page === child.id ? 'rgba(255, 255, 255, 0.12)' : 'transparent'}
                   rounded={'md'}
-                  mb={4}
+                  mb={2}
                   color={page === child.id ? 'white' : 'whiteAlpha.500'}
                   cursor={'pointer'}
                   _focus={{ outline: 'none' }}
