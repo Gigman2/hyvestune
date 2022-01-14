@@ -114,7 +114,6 @@ const NFTsHistory: React.FC = () => {
                                         gap={pixelToRem(18)}
                                     >
                                         {
-
                                             data.map((item, index) => <GridItem key={(i => i)(index)} >
                                                 <NFTsHistoryCard {...{ ...item }} />
                                             </GridItem>)

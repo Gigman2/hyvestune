@@ -12,17 +12,18 @@ interface IArrowButtonsProps {
   bg?: any
   _hover?: any
   iconSize?: any
+  h?: any
 }
 
-const ArrowButtons: React.FC<IArrowButtonsProps> = ({ handleClick, current, length, cols, size, bg, _hover, iconSize }) => {
+const ArrowButtons: React.FC<IArrowButtonsProps> = ({ h, handleClick, current, length, cols, size, bg, _hover, iconSize }) => {
   return (
     <Flex
+      h={h}
       d={{ base: 'block', md: 'flex' }}
       textAlign={{ base: 'right', md: 'inherit' }}
       align="center"
       justify={{ md: 'space-between' }}
       pos="absolute"
-      bg="transparent"
       top="50%"
       insetX={0}
       bottom={{ base: -14, md: '50%' }}
