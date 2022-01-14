@@ -39,8 +39,10 @@ const Genres = () => {
             templateColumns={'repeat(4,1fr)'}
           >
             {data.map((card, index: number) => (
-              <GridItem>
-                <ExploreCard imageText {...card} key={((i) => i)(index)} />
+              <GridItem
+                key={((i) => i)(index)}
+              >
+                <ExploreCard imageText {...card} />
               </GridItem>
             ))}
           </Grid>

@@ -5,7 +5,7 @@ import FormErrorHandler from './FormErrorHandler'
 import { IFormProps } from '../../interfaces/forms.interface'
 import { useFocus } from '~/hooks'
 
-const FormInput: React.FC<IFormProps & InputProps & {mTop?: number | string, inputIcon: any}> = ({
+const FormInput: React.FC<IFormProps & InputProps & {mTop?: number | string, inputIcon?: any}> = ({
   label,
   error,
   touched,

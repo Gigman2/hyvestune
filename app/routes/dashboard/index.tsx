@@ -5,7 +5,7 @@ import {Wave} from '~/theme/Icons'
 const index = () => {
     return (
         <Box>
-          <Grid templateColumns={'repeat(12,1fr)'} mt={12} gap={12}>
+          <Grid templateColumns={'repeat(12,1fr)'} mt={12} gap={12} p={8}>
             <Box as={GridItem} colSpan={8}>
               <Flex px={8}  bg="htGradient.2" rounded={'2xl'} h={66} w={'full'} align="center" justifyContent={'space-between'}>
                 <Box>
@@ -22,13 +22,13 @@ const index = () => {
                     <Icon as={FaPlay} color={'white'}/>
                   </Flex>
                 </Box>
-                <Box h="100%">
-                  <Image src={'/images/billie-removebg.png'} h="100%" />
+                <Box>
+                  <Image src={'/images/billie-removebg.png'} boxSize={'260px'} />
                 </Box>
               </Flex>
             </Box>
             <Box as={GridItem} colSpan={4}>
-              <Flex  bg="htIndigo.500" rounded={'2xl'} h={66} w={'full'} direction={'column'}>
+              <Flex  bg="htIndigo.500" rounded={'2xl'} h={66} w={'full'} direction={'column'} overflow={'hidden'}>
                 <Box mt={4} w="full" px={8} py={4}>
                   <Text fontSize={12} color="white">Continue</Text>
                   <Text color="white" fontSize={24} fontWeight={'light'}>Thriumphant</Text>

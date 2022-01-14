@@ -2,20 +2,19 @@ import { FC, ReactNode } from 'react';
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from 'remix';
 import type { MetaFunction } from 'remix';
 import { ChakraProvider } from '@chakra-ui/react';
-<<<<<<< HEAD
-import { theme } from './theme/theme'
-import styles from '../public/styles.css'
-
-export function links() {
-  return [{ rel: "stylesheet", href: styles }];
-}
-=======
 import { theme } from './theme/theme';
->>>>>>> 8bf8ae9d8ae75e89ef679dc3ad739596b83c9c3f
+import styles from '~/assets/styles/index.css'
+import publicStyles from 'public/styles.css'
+import { ComponentContextProvider } from './context/component';
+import { ModalContextProvider } from './context/modal';
 
 export const meta: MetaFunction = () => {
   return { title: 'HyvesTune' };
 };
+
+export function links() {
+  return [{ rel: "stylesheet", href: styles }, {rel: "stylesheet", href: publicStyles}];
+}
 
 const Document: FC<{ children: ReactNode; title?: string }> = ({ children, title }) => {
   return (
@@ -39,11 +38,15 @@ const Document: FC<{ children: ReactNode; title?: string }> = ({ children, title
 
 export default function App() {
   return (
-    <Document>
-      <ChakraProvider theme={theme}>
-        <Outlet />
-      </ChakraProvider>
-    </Document>
+    <ComponentContextProvider>
+      <Document>
+        <ChakraProvider theme={theme}>
+          <ModalContextProvider>
+            <Outlet />
+          </ModalContextProvider>
+        </ChakraProvider>
+      </Document>
+    </ComponentContextProvider>
   );
 }
 

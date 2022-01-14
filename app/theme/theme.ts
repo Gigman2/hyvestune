@@ -15,7 +15,7 @@ const breakpoints = createBreakpoints({
   export const theme = extendTheme({
     styles: {
       global: () => ({
-        'html, body': {
+        '*, html, body': {
           fontFamily: '"Inter", sans-serif',
           fontWeight: 400
         },
@@ -50,7 +50,8 @@ const breakpoints = createBreakpoints({
         600: '#e32498',
       },
       htGradient: {
-        500: 'linear-gradient(138.1deg, #12046B -4.72%, #D30B8F 109.38%)',
+        1: 'linear-gradient(138.1deg, #12046B -4.72%, #D30B8F 109.38%)',
+        2: 'linear-gradient(96.65deg, #D30B8F 1.51%, rgba(211, 11, 143, 0.58) 130.45%)',
       },
     },
     space: {

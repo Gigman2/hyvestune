@@ -9,8 +9,10 @@ interface IPropsExploreCard {
   showSubTexts?: boolean;
   imageText?: boolean;
   textForImage?: string;
+  textFontFamily?: any
 }
 const ExploreCard: React.FC<IPropsExploreCard> = ({
+  textFontFamily,
   pointer,
   artist,
   song,
@@ -32,6 +34,7 @@ const ExploreCard: React.FC<IPropsExploreCard> = ({
             position="absolute"
           >
             <Heading
+              fontFamily={textFontFamily || "Inter"}
               color="white"
               fontWeight={700}
               fontSize={pixelToRem(24)}
@@ -48,6 +51,7 @@ const ExploreCard: React.FC<IPropsExploreCard> = ({
         <Box mt={pixelToRem(16)}>
           <Flex direction="column">
             <Heading
+              fontFamily={textFontFamily || "Inter"}
               color="white"
               fontWeight={700}
               lineHeight={{ md: pixelToRem(16.94) }}
@@ -57,10 +61,12 @@ const ExploreCard: React.FC<IPropsExploreCard> = ({
             </Heading>
 
             <Text
+              fontFamily={textFontFamily || "Inter"}
               fontWeight={600}
               lineHeight={{ md: pixelToRem(14.52) }}
               fontSize={{ md: pixelToRem(12) }}
               mt={pixelToRem(7)}
+              color={"gray.600"}
             >
               {artist}
             </Text>

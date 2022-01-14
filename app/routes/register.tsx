@@ -6,32 +6,6 @@ import { Input } from '~/components/Forms';
 
 export default function Login() {
   return (
-<<<<<<< HEAD
-    <Box w={'full'} h={'100vh'} pt="7vh" bg={"url('/images/create account-image.png')"} backgroundSize="cover" pos="relative">
-      <Box bg="htGradient.1" w="100%" h="100%" pos={'absolute'} top="0" opacity={0.5} zIndex={2}></Box>
-      <Box w={'700px'} minH="80vh" bg="white" mx="auto" rounded="2xl" p={5} pos={'relative'} zIndex={3}>
-        <Heading textAlign={'center'} fontSize={18} mt={8}>Create Account</Heading>
-        
-      <Box mt={6} w={"500px"} mx={"auto"}>
-        <Input
-          type="email"
-          borderWidth={2} 
-          borderColor={'htIndigo.500'} 
-          rounded={10} 
-          w="full" 
-          as={Input}
-          required
-          id="email" 
-          label="Email"
-          onBlur={() => null}
-          placeholder=""
-          value={''}
-          error={''}
-          touched={false}
-          onChange={() => null}
-          setFieldTouched={() => null}
-        />
-=======
     <Box
       w={'full'}
       h={'100vh'}
@@ -41,7 +15,7 @@ export default function Login() {
       pos="relative"
     >
       <Box
-        bg="htGradient.500"
+        bg="htGradient.1"
         w="100%"
         h="100%"
         pos={'absolute'}
@@ -62,7 +36,6 @@ export default function Login() {
         <Heading textAlign={'center'} fontSize={18} mt={8}>
           Create Account
         </Heading>
->>>>>>> 8bf8ae9d8ae75e89ef679dc3ad739596b83c9c3f
 
         <Box mt={6} w={'500px'} mx={'auto'}>
           <Input

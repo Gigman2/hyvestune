@@ -8,7 +8,7 @@ const Explore = () => {
   return (
     <Layout page={2} showHeader>
       <NewReleases />
-      <Top100Hits />
+      <Top100Hits title="Top 100 Hits" />
       <Genres />
     </Layout>
   );
