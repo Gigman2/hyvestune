@@ -8,9 +8,13 @@ interface IArrowButtonsProps {
   current: number;
   length: number;
   cols: number;
+  size?: any
+  bg?: any
+  _hover?: any
+  iconSize?: any
 }
 
-const ArrowButtons: React.FC<IArrowButtonsProps> = ({ handleClick, current, length, cols }) => {
+const ArrowButtons: React.FC<IArrowButtonsProps> = ({ handleClick, current, length, cols, size, bg, _hover, iconSize }) => {
   return (
     <Flex
       d={{ base: 'block', md: 'flex' }}
@@ -28,39 +32,39 @@ const ArrowButtons: React.FC<IArrowButtonsProps> = ({ handleClick, current, leng
       {current > 0 ? (
         <IconButton
           color="#fff"
-          _hover={{ color: 'rgba(255, 255, 255, 0.12)' }}
+          _hover={_hover || { color: 'rgba(255, 255, 255, 0.12)' }}
           _focus={{ outline: 'none' }}
           boxShadow="xl"
-          bg="rgba(255, 255, 255, 0.12)"
-          w={pixelToRem(60)}
-          h={pixelToRem(60)}
-          borderRadius={pixelToRem(60)}
+          bg={bg || "rgba(255, 255, 255, 0.12)"}
+          w={size || pixelToRem(60)}
+          h={size || pixelToRem(60)}
+          borderRadius={size || pixelToRem(60)}
           aria-label="arrow button left"
           onClick={() => {
             handleClick(-1);
           }}
         >
-          <Icon as={IoIosArrowBack} />
+          <Icon as={IoIosArrowBack} boxSize={iconSize} />
         </IconButton>
       ) : (
         <Box></Box>
       )}
       {length - cols > current ? (
         <IconButton
-          w={pixelToRem(60)}
-          h={pixelToRem(60)}
-          borderRadius={pixelToRem(60)}
+          w={size || pixelToRem(60)}
+          h={size || pixelToRem(60)}
+          borderRadius={size || pixelToRem(60)}
           color="#fff"
-          _hover={{ color: 'rgba(255, 255, 255, 0.12)' }}
+          _hover={_hover || { color: 'rgba(255, 255, 255, 0.12)' }}
           _focus={{ outline: 'none' }}
-          bg="rgba(255, 255, 255, 0.12)"
+          bg={bg || "rgba(255, 255, 255, 0.12)"}
           boxShadow="xl"
           aria-label="arrow button right"
           onClick={() => {
             handleClick(+1);
           }}
         >
-          <Icon opacity={1} color="white" as={IoIosArrowForward} />
+          <Icon opacity={1} color="white" as={IoIosArrowForward} boxSize={iconSize} />
         </IconButton>
       ) : (
         <Box></Box>
