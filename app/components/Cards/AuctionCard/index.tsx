@@ -13,7 +13,7 @@ interface IAuctionCardProps {
 const AuctionCard: React.FC<IAuctionCardProps> = ({ image, title, cost, artist }) => {
     return <Box
         w="100%"
-        h={{ md: pixelToRem(281), "5xl": pixelToRem(281) }}
+        h={{ md: pixelToRem(270), "5xl": pixelToRem(281) }}
         bg="#333333"
         borderRadius={pixelToRem(20)}
         p={pixelToRem(10)}
@@ -28,6 +28,7 @@ const AuctionCard: React.FC<IAuctionCardProps> = ({ image, title, cost, artist }
                                 justify="flex-end"
                             >
                                 <Flex
+                                    p={2}
                                     mt={pixelToRem(8)}
                                     mr={pixelToRem(13)}
                                     alignItems="center"
@@ -38,7 +39,7 @@ const AuctionCard: React.FC<IAuctionCardProps> = ({ image, title, cost, artist }
                                     bg="linear-gradient(270.4deg, rgba(251, 251, 251, 0.252) 0.44%, rgba(227, 227, 227, 0.156) 111.15%)"
                                     borderRadius={pixelToRem(25)}
                                 >
-                                    <Icon color="white" as={Favorite} />
+                                    <Icon color="white" as={Favorite} boxSize={4} />
                                 </Flex>
 
                             </Flex>
@@ -75,7 +76,7 @@ const AuctionCard: React.FC<IAuctionCardProps> = ({ image, title, cost, artist }
                     </Flex>
                 </Box>
             </Box>
-            <Flex w="100%" align="center" justify="space-between" h={pixelToRem(59)} >
+            <Flex w="100%" align="center" justify="space-between" h={pixelToRem(53)} >
                 <Text
                     fontFamily="Inter"
                     color="#E743A6"

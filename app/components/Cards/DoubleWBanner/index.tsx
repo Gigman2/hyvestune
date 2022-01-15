@@ -4,6 +4,7 @@ import { pixelToRem } from '~/helpers/misc'
 import { PlayPlug } from '~/theme/Icons'
 
 interface Props { 
+    height?: number
     color?: string
     image?: string
     context?: {
@@ -15,7 +16,7 @@ interface Props {
     }
 }
 
-const DoubleWBanner: React.FC<Props> = ({color, image, context}) => {
+const DoubleWBanner: React.FC<Props> = ({color, image, context, height}) => {
     return <Box
         w={"100%"}
         h={pixelToRem(269)}
@@ -33,7 +34,7 @@ const DoubleWBanner: React.FC<Props> = ({color, image, context}) => {
                     pt={pixelToRem(62)}
                     pb={pixelToRem(29)}
                     pl={pixelToRem(39)}
-
+                    h={pixelToRem(269)}
                 >
                     <Text
                         fontFamily="Lato"
@@ -96,7 +97,7 @@ const DoubleWBanner: React.FC<Props> = ({color, image, context}) => {
             </GridItem>
 
             <GridItem>
-                <Flex justifyContent={'end'}>
+                <Flex justifyContent={'end'}  h={pixelToRem(269)}>
                     <Image h={'100%'} src={image} />
                 </Flex>
             </GridItem>
